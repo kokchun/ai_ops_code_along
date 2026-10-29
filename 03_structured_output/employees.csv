@@ -1,0 +1,11 @@
+name,age,salary,role,description
+Erik Andersson,38,52000,Systemutvecklare,Ansvarar för att utveckla och underhålla företagets kärnsystem med fokus på kodkvalitet och skalbarhet. Har lång erfarenhet av .NET och molnbaserade lösningar.
+Maria Karlsson,29,35000,IT-supporttekniker,"Hjälper kollegor med hårdvara, programvara och nätverksproblem i vardagen. Driftar supportärenden i ticketsystemet och säkerställer snabb återkoppling."
+Lars Nilsson,45,58000,Molnarkitekt,Designar och implementerar företagets molnstrategi på Azure med fokus på säkerhet och kostnadseffektivitet. Arbetar nära utvecklingsteam för att modernisera befintliga applikationer.
+Sofia Berg,32,38000,HR-koordinator,"Stöder chefer med rekrytering, onboarding och personaladministration i löpande arbete. Ansvarar även för att uppdatera personalhandboken och HR-systemet."
+Anna Lindqvist,50,55000,HR-chef,"Leads HR-avdelningen och driver strategiska personalfrågor som kompetutveckling och organisationskultur. Har ansvar för löneöversyner, kollektivavtal och arbetsmiljöarbete."
+Olivia Svensson,26,33000,Marknadskoordinator,"Planerar och genomför mindre marknadsföringsaktiviteter som mässor, nyhetsbrev och sociala medier. Stöttar marknadschefen med uppföljning av kampanjer och budget."
+Johan Persson,34,42000,Digital marknadsförare,"Optimerar företagets synlighet online via SEO, SEM och betalda sociala kampanjer. Analyserar trafikdata och konverteringar för att förbättra ROI."
+Daniel Eriksson,41,54000,Säkerhetsspecialist,"Arbetar proaktivt med IT-säkerhet, sårbarhetshantering och incidentrespons i hela organisationen. Utbildar medarbetare i säkerhetsmedvetenhet och policyfterföljd."
+Emma Holm,28,36000,Rekryteringskonsult,Hanterar hela rekryteringsprocessen från annonsering till anställningsavtal för olika roller. Bygger och underhåller talangpooler för framtida behov.
+Filip Dahl,47,50000,Varumärkeschef,Utvecklar och förvaltar företagets varumärkesplattform samt säkerställer enhetlig kommunikation i alla kanaler. Ansvarar för reklambyråer och varumärkesrelaterade projekt.
