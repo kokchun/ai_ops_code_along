@@ -9,13 +9,12 @@ def layout():
 
     movie_string = st.text_input("Give a statement and it will give backa movie")
 
-    movie = requests.post("http://127.0.0.1:8000/movie", json={"prompt": movie_string}).json()
-
-    if movie:
+    if movie_string:
+        movie = requests.post("http://127.0.0.1:8000/movie", json={"prompt": movie_string}).json()
         st.write(movie)
 
     genre = st.selectbox(
-        "Choose genre", options=["action", "comedy", "cartoon", "adventure", "romance"]
+        "Choose genre", options=["all","action", "comedy", "cartoon", "adventure", "romance"]
     )
 
     movies = requests.get(f"http://127.0.0.1:8000/movies?genre={genre}").json()

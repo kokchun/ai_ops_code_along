@@ -8,10 +8,11 @@ app = FastAPI()
 
 @app.get("/movies")
 async def read_movies(genre: str | None = None):
+
     if genre:
         sql = "SELECT * FROM movies WHERE genre = ?;"
         params = [genre]
-    else: 
+    if genre == "all" or not genre: 
         sql = "FROM movies;"
         params = None
 
