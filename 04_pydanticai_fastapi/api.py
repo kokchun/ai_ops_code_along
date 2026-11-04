@@ -9,7 +9,7 @@ async def read_movies():
     return "movies here testing reload"
 
 @app.post("/movie")
-async def create_movie(query):
+async def create_movie(query: str):
     result = await movie_agent.run(query)
     # TODO: save to database
 
