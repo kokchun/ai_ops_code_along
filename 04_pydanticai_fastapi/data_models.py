@@ -18,3 +18,6 @@ class Movie(BaseModel):
     summary: str = Field(
         description="short exciting summary of the movie, max 3 sentences"
     )
+
+class Prompt(BaseModel):
+    prompt: str
