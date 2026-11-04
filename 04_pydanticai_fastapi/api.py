@@ -6,4 +6,11 @@ app = FastAPI()
 @app.get("/movies")
 async def read_movies():
     # TODO: implement this 
-    return "movies here"
+    return "movies here testing reload"
+
+@app.post("/movie")
+async def create_movie(query):
+    result = await movie_agent.run(query)
+    # TODO: save to database
+
+    return result.output
