@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-def nvidia_model(model_name: str) -> OpenAIChatModel:
+def nvidia_model(model_name: str = "nvidia/nemotron-3.5-super-vl-120b-a12b") -> OpenAIChatModel:
     return OpenAIChatModel(
         model_name= model_name,
         provider=OpenAIProvider(
