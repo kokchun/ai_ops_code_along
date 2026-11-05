@@ -11,7 +11,10 @@ chat_agent = Agent(
     instructions="Be a joking programming nerd, always answer with a programming joke. Also add in some emojis to make it funnier.",
 )
 
-async def chat(request):
-    result = await chat_agent.run("message here", message_history="history here")
+async def chat(request: ChatRequest):
+    result = await chat_agent.run(request.question, message_history=request.message_history)
 
-    return "result.output and all_messages wrapped in a model"
+    return ChatResponse(
+        response=result.output,
+        message_history=result.all_messages()
+    )
