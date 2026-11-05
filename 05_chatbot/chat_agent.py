@@ -1,6 +1,7 @@
 from pydantic_ai import Agent
 from dotenv import load_dotenv
 from model import nvidia_model
+from data_models import ChatRequest, ChatResponse
 
 
 load_dotenv()
