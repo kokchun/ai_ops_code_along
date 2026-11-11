@@ -21,6 +21,7 @@ dependencies = [
     { name = "duckdb" },
     { name = "fastapi" },
     { name = "ipykernel" },
+    { name = "logfire", extra = ["system-metrics", "variables"] },
     { name = "matplotlib" },
     { name = "pandas" },
     { name = "pydantic-ai" },
@@ -32,6 +33,7 @@ requires-dist = [
     { name = "duckdb", specifier = ">=1.4,<2" },
     { name = "fastapi", specifier = ">=0.162.0" },
     { name = "ipykernel", specifier = ">=7.4.0" },
+    { name = "logfire", extras = ["system-metrics", "variables"], specifier = ">=5.4.0" },
     { name = "matplotlib", specifier = ">=3.11.2" },
     { name = "pandas", specifier = ">=3.1.0" },
     { name = "pydantic-ai", specifier = ">=2.63.0" },
@@ -1285,6 +1287,12 @@ wheels = [
 httpx = [
     { name = "logfire-sdk", extra = ["httpx"] },
 ]
+system-metrics = [
+    { name = "logfire-sdk", extra = ["system-metrics"] },
+]
+variables = [
+    { name = "logfire-sdk", extra = ["variables"] },
+]
 
 [[package]]
 name = "logfire-api"
@@ -1320,6 +1328,13 @@ wheels = [
 [package.optional-dependencies]
 httpx = [
     { name = "opentelemetry-instrumentation-httpx" },
+]
+system-metrics = [
+    { name = "opentelemetry-instrumentation-system-metrics" },
+]
+variables = [
+    { name = "pydantic" },
+    { name = "pydantic-handlebars" },
 ]
 
 [[package]]
@@ -1744,6 +1759,21 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/de/50/41544799b043d14fdfa6fe62fa2518eaba22793fce03e9abde930b92e671/opentelemetry_instrumentation_httpx-0.66b1.tar.gz", hash = "sha256:5865a72c68098c85955a271ab8744b480a36e3ee492d35b8cadb93c7c4dbb618", size = 26637, upload-time = "2026-10-06T17:36:27.265Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/4f/c6/e5682b1bfb320b32505e88255c34ae1e99fe9fb220cc465c244e91967eac/opentelemetry_instrumentation_httpx-0.66b1-py3-none-any.whl", hash = "sha256:0342a4002c6dbc6c4bf22cc7e698f50f5c8b77f63325c6f40c94ab87e016bf4d", size = 17723, upload-time = "2026-10-06T17:35:36.501Z" },
+]
+
+[[package]]
+name = "opentelemetry-instrumentation-system-metrics"
+version = "0.66b1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "opentelemetry-api" },
+    { name = "opentelemetry-instrumentation" },
+    { name = "opentelemetry-semantic-conventions" },
+    { name = "psutil" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/d6/81/ab8cabaf45c5248fa88a0d0d3acea4483c105d76cd6c849654ebdab16f92/opentelemetry_instrumentation_system_metrics-0.66b1.tar.gz", hash = "sha256:b0fccbc1aecf35c182431a035ec4809b8f9607eec692243cf70f23b3bda51231", size = 17207, upload-time = "2026-10-06T17:36:40.518Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/a3/fd/ea072c512d65ba4054b02c8b7080cf1b362761d4727ee6c1f36dce53328d/opentelemetry_instrumentation_system_metrics-0.66b1-py3-none-any.whl", hash = "sha256:0654b41eb6db3c2f9ad9979487afcc6f461e5b35df282f0a11d0f465e906d967", size = 13913, upload-time = "2026-10-06T17:35:57.01Z" },
 ]
 
 [[package]]
@@ -2317,6 +2347,18 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/9b/b5/ad651d8c39cf2c537307ad68d4d1e7d75fd34566a405abc5370e1467c4fe/pydantic_graph-2.63.0.tar.gz", hash = "sha256:ffd687a20b7c6b2914c95e19f4b1501c9768763289b482eea82dd72b2488366e", size = 46461, upload-time = "2026-10-28T02:03:37.688Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/98/da/4e35663fc8c174b583c908975e9cb2a24c3ee55b714adbff8974b0472f61/pydantic_graph-2.63.0-py3-none-any.whl", hash = "sha256:803eef2c9b24798d0d13372f7e9d1600920abb96e114368c7add7a57436cb7b2", size = 53642, upload-time = "2026-10-28T02:03:27.55Z" },
+]
+
+[[package]]
+name = "pydantic-handlebars"
+version = "0.2.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "pydantic" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/96/73/e55a1fe1a8788a5fa82d9209e796f4111e28f2d2fecab7173aa6d80516ad/pydantic_handlebars-0.2.1.tar.gz", hash = "sha256:d4124cfbf7d6e3bded9331a08ccccf6f29f3e3a93665b35b5d6061650aeeb49f", size = 176949, upload-time = "2026-05-25T01:24:38.354Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/55/11/364bc401f1d8fdb3947079fc43ffdfbfc9132d065981a03a95d2e87440c4/pydantic_handlebars-0.2.1-py3-none-any.whl", hash = "sha256:c713427d6498cf4b66814447d54753a2748f8a8d3a9f00c194192ddb3df61e52", size = 50476, upload-time = "2026-05-25T01:24:37.104Z" },
 ]
 
 [[package]]
