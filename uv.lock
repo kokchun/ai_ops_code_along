@@ -21,6 +21,7 @@ dependencies = [
     { name = "duckdb" },
     { name = "fastapi" },
     { name = "ipykernel" },
+    { name = "lancedb" },
     { name = "logfire", extra = ["system-metrics", "variables"] },
     { name = "matplotlib" },
     { name = "pandas" },
@@ -33,6 +34,7 @@ requires-dist = [
     { name = "duckdb", specifier = ">=1.4,<2" },
     { name = "fastapi", specifier = ">=0.162.0" },
     { name = "ipykernel", specifier = ">=7.4.0" },
+    { name = "lancedb", specifier = ">=0.41.0" },
     { name = "logfire", extras = ["system-metrics", "variables"], specifier = ">=5.4.0" },
     { name = "matplotlib", specifier = ">=3.11.2" },
     { name = "pandas", specifier = ">=3.1.0" },
@@ -604,6 +606,18 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/ef/f9/4383635281999c3eaa44bf327de523ba42240b35eb87c1130adac4a829c6/debugpy-1.8.22-cp315-cp315-win32.whl", hash = "sha256:225d063f81708c2546999e7edfac0198b2d5c2f144797dc64858f867948633e0", size = 5359469, upload-time = "2026-09-15T21:44:43.234Z" },
     { url = "https://files.pythonhosted.org/packages/7b/14/4fe9f46a9c825c8cbc6dc4aebc2a885b0bceb37ce2a37699c170482e7a40/debugpy-1.8.22-cp315-cp315-win_amd64.whl", hash = "sha256:b17a4896520f1c6da09ce76ec8215df0b85b0b6f3617526a4c65c2315340875a", size = 5397869, upload-time = "2026-09-15T21:44:44.783Z" },
     { url = "https://files.pythonhosted.org/packages/56/3d/c7dc9f35bc9e22cdb53679f844bee40fd5cff871862f60595869a433400d/debugpy-1.8.22-py2.py3-none-any.whl", hash = "sha256:a9e9d3550e15ca479c59333e90845029190531f0cacfedab3b815a57bd913947", size = 5374857, upload-time = "2026-09-15T21:44:54.454Z" },
+]
+
+[[package]]
+name = "deprecation"
+version = "2.1.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "packaging" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/5a/d3/8ae2869247df154b64c1884d7346d412fed0c49df84db635aab2d1c40e62/deprecation-2.1.0.tar.gz", hash = "sha256:72b3bde64e5d778694b0cf68178aed03d15e15477116add3fb773e581f9518ff", size = 173788, upload-time = "2020-04-20T14:23:38.738Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/02/c3/253a89ee03fc9b9682f1541728eb66db7db22148cd94f89ab22528cd1e1b/deprecation-2.1.0-py2.py3-none-any.whl", hash = "sha256:a10811591210e1fb0e768a8c25517cabeabcba6f0bf96564f8ff45189f90b14a", size = 11178, upload-time = "2020-04-20T14:23:36.581Z" },
 ]
 
 [[package]]
@@ -1269,6 +1283,54 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/e3/9a/59a6f6ae6f938c15076be2c21b6cedea973d71bb1349ec84fa485fab82cf/kiwisolver-1.5.1-cp315-cp315t-musllinux_1_2_x86_64.whl", hash = "sha256:ab620eb663952455271ac37f9aaad86b73c969c02f11f53cea405b38e96a4300", size = 2395634, upload-time = "2026-08-28T10:28:03.977Z" },
     { url = "https://files.pythonhosted.org/packages/e9/2d/8982c1fb7926da5bb7ed60318c3665b5c3f941447271ac982960a11b8637/kiwisolver-1.5.1-cp315-cp315t-win_amd64.whl", hash = "sha256:cb6fae641357ed2f6e533c0d3c6504a4a5703621a50c89459e46051d56b61140", size = 75379, upload-time = "2026-08-28T10:28:06.307Z" },
     { url = "https://files.pythonhosted.org/packages/07/78/ba7b6dfa1708b82b373ac056928a30c545d5c1a627df9839dcec3c6c1881/kiwisolver-1.5.1-cp315-cp315t-win_arm64.whl", hash = "sha256:b390aec180a7c054919c04898835e1c77bced23ea8383eb2c570213bf25d1a86", size = 73011, upload-time = "2026-08-28T10:28:07.578Z" },
+]
+
+[[package]]
+name = "lance-namespace"
+version = "0.13.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "lance-namespace-urllib3-client" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/c0/e7/d5d46594678ee479c0eda830c47b2f5c46133bd100e84e9aa6e01306eca7/lance_namespace-0.13.0.tar.gz", hash = "sha256:24554a0997bdb39595c6e4cb3ac6722069f6cd3bd1a74e7acbba7bfaf774a40d", size = 11636, upload-time = "2026-09-14T02:47:03.871Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/e7/47/cfa33cca1ba7c749fd2918cfc5c8ded788f378cc6424d23e4fead5a14125/lance_namespace-0.13.0-py3-none-any.whl", hash = "sha256:438c7b17aef421c21c138196e715f2510d62f07e865372047f87c1e75e618c7a", size = 13507, upload-time = "2026-09-14T02:47:01.765Z" },
+]
+
+[[package]]
+name = "lance-namespace-urllib3-client"
+version = "0.13.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "pydantic" },
+    { name = "python-dateutil" },
+    { name = "typing-extensions" },
+    { name = "urllib3" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/69/25/9aaa4a5e8999693fb0f227c2c0c4b97bd8f0539066408cdff0b89d41b2d5/lance_namespace_urllib3_client-0.13.0.tar.gz", hash = "sha256:1e8a79c6e4e6277033597fd76aa0e2f33d909ca1436c935936e9e569221f43ef", size = 238348, upload-time = "2026-09-14T02:47:04.521Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/60/4c/7b8f0712a7fe1b8655b711342bc4989696635a79e7027ee56ba3cae23e99/lance_namespace_urllib3_client-0.13.0-py3-none-any.whl", hash = "sha256:fb361eb4f6c7f2d1f9e92809609657b73e38241393e9c4516e12d6b6ee643a0a", size = 406848, upload-time = "2026-09-14T02:47:02.715Z" },
+]
+
+[[package]]
+name = "lancedb"
+version = "0.41.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "deprecation" },
+    { name = "lance-namespace" },
+    { name = "numpy" },
+    { name = "packaging" },
+    { name = "pyarrow" },
+    { name = "pydantic" },
+    { name = "tqdm" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/97/97/4349246239687e01690af02cf0d3b58e26da70794644ae48417acc0909d4/lancedb-0.41.0.tar.gz", hash = "sha256:ca0b0418eaaa5c2aa8e9ff1e98a475b14d4517af3b9face22300213871bd1ebc", size = 2132745, upload-time = "2026-10-29T09:10:45.82Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/2e/17/c77b33e6af5c8da320843ead3d2988adbb71b26b731b2fe20d38b1116f5d/lancedb-0.41.0-cp310-abi3-macosx_11_0_arm64.whl", hash = "sha256:b8892ff52eb32224c0414feb6f57357c4b79edeed0c2a4afe6d7f6f538dc12d0", size = 69031230, upload-time = "2026-10-29T09:10:26.053Z" },
+    { url = "https://files.pythonhosted.org/packages/04/32/b6b8a41ce5e255078e52405ca0340fc579c378dca0b1cc1fbfb2bcdf1fb2/lancedb-0.41.0-cp310-abi3-manylinux_2_28_aarch64.whl", hash = "sha256:984d97c50169face1539ccaa802a2002ebc7b50a445c3e7e8cd24513569c1aab", size = 73184107, upload-time = "2026-10-29T09:10:30.268Z" },
+    { url = "https://files.pythonhosted.org/packages/ae/f6/a0da90921905febaf19bf05c5301cef004d5fb83d41175a28a6b9b6e1d0e/lancedb-0.41.0-cp310-abi3-manylinux_2_28_x86_64.whl", hash = "sha256:e3da8fbde2c916d41fc324a91a25b3f57a7b8ac5eb2981d5fb8fd0914901c44e", size = 76876798, upload-time = "2026-10-29T09:10:34.344Z" },
+    { url = "https://files.pythonhosted.org/packages/14/05/34ded5ae87fc632bed8c95370df082bc01ab5bac1a599727c10b07315d12/lancedb-0.41.0-cp310-abi3-win_amd64.whl", hash = "sha256:c00ba59f0f880c2581566851a6018c00ef5c49be56ac4484c600e5129135f059", size = 85595685, upload-time = "2026-10-29T09:10:38.536Z" },
 ]
 
 [[package]]
@@ -2961,6 +3023,18 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/ab/27/0a766fac6b1cc629d96346329a0485287fd2857c51a887a3a154f2a69938/tornado-6.6-cp315-cp315t-win32.whl", hash = "sha256:f661c21117b875d612371f3eb243d0c69f56d9bdd6aee38b7c24453419dfe554", size = 530488, upload-time = "2026-10-21T15:31:00.77Z" },
     { url = "https://files.pythonhosted.org/packages/5c/80/3e4142570883da27b3f60ae82c638ac96e60997eac684740613557519c96/tornado-6.6-cp315-cp315t-win_amd64.whl", hash = "sha256:ee8853ab35da510dc952879ebd9995c82bc10ffb7925fd87930dc0d6916f4b39", size = 530777, upload-time = "2026-10-21T15:31:02.087Z" },
     { url = "https://files.pythonhosted.org/packages/17/57/4a85c617b6349962320b4afbe1386d5b05fd57218ee8ad6e82e0110ec9ee/tornado-6.6-cp315-cp315t-win_arm64.whl", hash = "sha256:7de62e2dfdf559fd7154d2b9aa58ff3d9cff8304ae0519341feb082618bc2a33", size = 530780, upload-time = "2026-10-21T15:31:03.425Z" },
+]
+
+[[package]]
+name = "tqdm"
+version = "4.70.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "colorama", marker = "sys_platform == 'win32'" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/0d/ea/b2a5bd54b28a324dae8211928b2d730b6547500342c7e6c6dea08bd0a485/tqdm-4.70.1.tar.gz", hash = "sha256:cefd0eca11b2a37a3aee776544d4f4ae913f02688135b5556b8788dfa474afc4", size = 171846, upload-time = "2026-09-11T07:25:16.601Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/a7/03/921a3d3c75785aca9ebfbfcabfbc3a1be12e2ab5265deb026d55a5a3f83e/tqdm-4.70.1-py3-none-any.whl", hash = "sha256:c293e525e6fef9c20e8728fd4612df02a0aa31bb5fe91ecd93e123b1b7bffa73", size = 80199, upload-time = "2026-09-11T07:25:14.599Z" },
 ]
 
 [[package]]
