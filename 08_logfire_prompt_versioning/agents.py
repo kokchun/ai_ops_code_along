@@ -12,13 +12,13 @@ model = nvidia_model()
 study_agent = Agent(
     model=model,
     deps_type=ClientDeps,
-    instructions=get_prompt("study_agent_instructions"),
+    instructions=get_prompt("study_agent_intructions"),
 )
 
 career_agent = Agent(
     model=model,
     deps_type=ClientDeps,
-    instructions=get_prompt("career_agent_instructions"),
+    instructions=get_prompt("career_agent_instructions", label="production"),
 )
 
 coach_agent = Agent(

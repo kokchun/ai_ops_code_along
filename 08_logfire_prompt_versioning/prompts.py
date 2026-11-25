@@ -16,4 +16,4 @@ def get_prompt(name, default="You are a jokey assistant", label="latest"):
 
 
 if __name__ == "__main__":
-    print(get_prompt("coach_agent_instructions"))
+    print(get_prompt("career_agent_instructions", label="staging2"))
