@@ -12,7 +12,7 @@ study_agent = Agent(
     model=model,
     deps_type=ClientDeps,
     instructions=(
-        "You are a study expert. Give concrete study plans and learning techniques."
+        "You are a study expert. Give concrete study plans and learning techniques. "
     ),
 )
 
