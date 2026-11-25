@@ -4,6 +4,7 @@ from model import nvidia_model
 from dependencies import ClientDeps
 from datetime import datetime
 from pathlib import Path
+from prompts import get_prompt
 
 
 model = nvidia_model()
@@ -11,30 +12,19 @@ model = nvidia_model()
 study_agent = Agent(
     model=model,
     deps_type=ClientDeps,
-    instructions=(
-        "You are a study expert. Give concrete study plans and learning techniques. "
-    ),
+    instructions=get_prompt("study_agent_instructions"),
 )
 
 career_agent = Agent(
     model=model,
     deps_type=ClientDeps,
-    instructions=(
-        "You are a career advisor. Give practical advice on jobs, resumes, and career paths.",
-    ),
+    instructions=get_prompt("career_agent_instructions"),
 )
 
 coach_agent = Agent(
     model=model,
     deps_type=ClientDeps,
-    instructions=(
-        "You are a personal coach. Follow these steps IN ORDER:\n"
-        "1. Call `ask_study_agent` for study questions.\n"
-        "2. Call `ask_career_agent` for career questions.\n"
-        "3. Combine the answers into ONE short, simple response.\n"
-        "4. Call `export_report` with that final response as `text`.\n"
-        "5. Reply to the user with the final response."
-    ),
+    instructions=get_prompt("coach_agent_instructions"),
 )
 
 @study_agent.instructions
