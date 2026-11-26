@@ -3,6 +3,7 @@ from pydantic_evals.evaluators import LLMJudge, Evaluator, EvaluatorContext, Con
 from dataclasses import dataclass
 from pydantic_evals import Dataset, Case
 from model import nvidia_model
+import asyncio
 
 # 2 types of evals
 # - deterministic
@@ -39,8 +40,21 @@ dataset = Dataset(
             ),
             evaluators=(Contains("tåg", case_sensitive=False),),
         ),
-        Case(),
-        Case(),
+        # Case(),
+        # Case(),
     ],
     evaluators=[WordCountLimit(limit=150)],
 )
+
+# task function
+async def run_coach(inp: CoachInput) -> str:
+    result = await coach_agent.run(inp.prompt, deps = inp.client)
+    return result.output
+
+# evaluate the task function on the dataset
+async def main():
+    report = await dataset.evaluate(run_coach)
+    report.print()
+
+if __name__ == "__main__":
+    asyncio.run(main())
